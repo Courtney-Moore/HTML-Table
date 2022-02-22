@@ -1,0 +1,31 @@
+CREATE DATABASE health_tracker_journal;
+
+USE health_tracker_journal;
+
+
+CREATE TABLE users
+( ID int PRIMARY KEY NOT NULL  AUTO_INCREMENT,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL,
+    location varchar(255) NOT NULL,
+    birthday datetime NOT NULL,
+    age int(3) NOT NULL,
+    gender varchar(255) NOT NULL,
+    created_at datetime NOT NULL,
+    updated_at datetime NOT NULL
+    );
+
+
+    
+CREATE TABLE healths 
+(   ID int NOT NULL,
+    physical varchar(255) NOT NULL,
+    diets varchar(255) NOT NULL,
+    mental varchar(255) NOT NULL
+    );
+    
+CREATE TABLE enviroments
+ (  ID int NOT NULL,
+    weather varchar(255) NOT NULL,
+    home_organization varchar(255) NOT NULL
+   );

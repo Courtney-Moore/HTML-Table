@@ -1,0 +1,89 @@
+===============================================================================================================
+Query: Create 3 new dojos
+
+USE dojos_and_ninjas_schema;
+
+INSERT INTO  dojos
+(id, name, created_at, updated_at)
+VALUES
+(1, 'CoffeeDojo', '2022/02/21 02:09:45', '2022/02/21 02:10:45'),
+(2, 'Non-Sleepers Only Coders', '2022/02/21 02:21:45', '2022/02/21 02:21:45'),
+(3, 'DATA WAY DOJO', '2022/02/21 02:21:45', '2022/02/21 02:21:45' );
+==============================================================================================================
+
+Query: Delete the 3 dojos you just created
+
+USE dojos_and_ninjas_schema;
+
+DELETE 
+FROM dojos
+
+===============================================================================================================
+Query: Create 3 more dojos
+
+INSERT INTO  dojos
+(id, name, created_at, updated_at)
+VALUES
+(1, 'Tasty Coffee Dojo', '2022/02/22 01:09:45', '2022/02/21 03:10:55'),
+(2, 'Future Google Masters', '2022/02/21 03:21:45', '2022/02/22 06:21:45'),
+(3, 'Semi Colon Seekers', '2022/03/22 05:21:45', '2022/03/22 10:15:35' );
+
+================================================================================================================
+Query: Create 3 ninjas that belong to the first dojo
+
+INSERT INTO ninjas
+(id, first_name, last_name, age, created_at, updated_at, dojos_id)
+VALUES
+(1, 'Ima', 'tired', 50, '2022/12/25 05:58:49', '2022/12/25 05:59:49',1),
+(2, 'Normal', 'Namingislame', 12, '2022/12/25 05:58:49', '2022/12/25 05:59:49',1),
+(3, 'Bob', 'Dork', 42, '2022/12/25 05:58:49', '2022/12/25 05:59:49',1);
+===================================================================================================================
+
+Query: Create 3 ninjas that belong to the second dojo
+
+
+INSERT INTO ninjas
+(id, first_name, last_name, age, created_at, updated_at, dojos_id)
+VALUES
+(4, 'Sonic', 'Spikeyballofdoom', 50, '2022/12/25 05:58:49', '2022/12/25 05:59:49',2),
+(5, 'Zebra', 'cakenomnom', 12, '2022/12/25 05:58:49', '2022/12/25 05:59:49',2),
+(6, 'Steve', 'In', 42, '2022/12/25 05:58:49', '2022/12/25 05:59:49',2);
+
+===================================================================================================================
+
+Query: Create 3 ninjas that belong to the third dojo
+
+(7, 'Pika', 'choooooooooo', 21, '2022/12/25 05:58:49', '2022/12/25 05:59:49',3),
+(8, 'Oscar', 'Ismyspiritanimal', 45, '2022/12/25 05:58:49', '2022/12/25 05:59:49',3),
+(9, 'Original', 'Ted', 42, '2022/12/25 05:58:49', '2022/12/25 05:59:49',3);
+
+===================================================================================================================
+
+Query: Retrieve all the ninjas from the first dojo
+
+SELECT *
+FROM ninjas
+WHERE dojos_id = 1;
+
+===================================================================================================================
+
+Query: Retrieve all the ninjas from the last dojo
+
+
+
+SELECT *
+FROM ninjas
+WHERE dojos_id = 3;
+===================================================================================================================
+
+
+Query: Retrieve the last ninja's dojo
+
+SELECT dojos_id
+FROM ninjas
+WHERE id = 9;
+
+
+
+
+Submit your .txt file that contains all the queries you ran in the shell
